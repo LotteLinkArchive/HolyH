@@ -50,6 +50,10 @@ typedef      I32 INAT;
 typedef      U32 UNAT;
 typedef      R32 RNAT;
 
+// Size type
+typedef   size_t SX;  // Size type, length unspecified
+typedef  ssize_t SSX; // Size type, length unspecified, and signed
+
 // Boolean types
 typedef     bool U1;
 #define BOOLIFY(a) ((a)?(true):(false)) // May not be needed with _Bool
