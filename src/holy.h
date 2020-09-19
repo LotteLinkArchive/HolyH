@@ -37,6 +37,10 @@ typedef  int32_t I32;
 typedef uint64_t U64;
 typedef  int64_t I64;
 
+// String component types
+// Only use these for storing characters for strings.
+typedef     char CHR;
+
 // Real typedefs
 typedef    float R32; // May not be exactly 32 or 64 bits depending on arch
 typedef   double R64;
