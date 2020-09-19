@@ -7,6 +7,7 @@
 #ifndef HOLY_HEADER_FILE
 #define HOLY_HEADER_FILE
 
+#include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h> // C99
 
