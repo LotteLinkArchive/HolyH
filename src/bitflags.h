@@ -4,12 +4,12 @@
 #include "types.h"
 
 #define HLYCHCKFLG (field, bit) \
-    (BOOLIFY((field) & ((__typeof__ (field))0x01 << (bit))))
-#define HLYSETFLG  (field, bit) \
-    ((field) |  ((__typeof__ (field))0x01 << (bit)))
+	(BOOLIFY((field) & ((__typeof__ (field))0x01 << (bit))))
+#define HLYSETFLG	(field, bit) \
+	((field) |	((__typeof__ (field))0x01 << (bit)))
 #define HLYUNSETFLG(field, bit) \
-    ((field) & ~((__typeof__ (field))0x01 << (bit)))
+	((field) & ~((__typeof__ (field))0x01 << (bit)))
 #define HLYTOGLFLG (field, bit) \
-    ((field) ^  ((__typeof__ (field))0x01 << (bit)))
+	((field) ^	((__typeof__ (field))0x01 << (bit)))
 
 #endif
