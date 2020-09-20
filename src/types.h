@@ -48,7 +48,10 @@ typedef	R32 RNAT;
 
 // Size type
 typedef	size_t SX; // Size type, length unspecified
+#ifdef HOLY_ENABLE_SSX
+// You might not want to enable SSX because it won't work on things like MSYS2
 typedef	ssize_t SSX; // Size type, length unspecified, and signed
+#endif
 
 // Boolean types
 typedef	bool U1;
