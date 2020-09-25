@@ -15,4 +15,6 @@ inline __attribute__((always_inline)) U32 u32rup2(U32 v) {
 	return v;
 }
 
+#define UINTP2CHK(n) (((n) & ((n) - 1) == 0) && (n) != 0)
+
 #endif
