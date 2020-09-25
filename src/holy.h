@@ -10,5 +10,7 @@
 #include "types.h"
 #include "vec.h"
 #include "macros.h"
+#include "bitflags.h"
+#include "twiddle.h"
 
 #endif
