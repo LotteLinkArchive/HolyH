@@ -1,10 +1,21 @@
 #ifndef HOLYTYP_HEADER_FILE
 #define HOLYTYP_HEADER_FILE
 
+#include <cstdv.h>
+
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdint.h>
-#include <stdbool.h> /* C99 Only! */
+
+#ifdef C99
+#include <stdbool.h> /* stdbool.h is C99 Only! */
+#else
+#if !defined(bool) && !defined(true) && !defined(false)
+#define bool  U8
+#define true  1
+#define false 0
+#endif
+#endif
 
 /* Integer maximums */
 #define U8_MAX  UINT8_MAX

@@ -7,6 +7,7 @@
 #ifndef HOLY_HEADER_FILE
 #define HOLY_HEADER_FILE
 
+#include "cstdv.h"
 #include "types.h"
 #include "vec.h"
 #include "macros.h"
