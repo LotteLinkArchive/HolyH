@@ -5,16 +5,16 @@
 #include <pmmintrin.h>
 #include "types.h"
 
-// Vector definition macro
+/* Vector definition macro */
 #define DEF_VECTYPE(name, element_type, elements) \
 typedef element_type name __attribute__ \
 ((vector_size (sizeof(element_type) * elements)));
-// TODO: Automatically round up to power of two for vector size
+/* TODO: Automatically round up to power of two for vector size */
 
-// Useful vector types
+/* Useful vector types */
 DEF_VECTYPE(R64VEC_4D, R64, 4)
 DEF_VECTYPE(R64VEC_2D, R64, 2)
-typedef R64VEC_4D R64VEC_3D; // Only power of 2 vectors are allowed
+typedef R64VEC_4D R64VEC_3D; /* Only power of 2 vectors are allowed */
 DEF_VECTYPE(R32VEC_4D, R32, 4)
 DEF_VECTYPE(R32VEC_2D, R32, 2)
 typedef R32VEC_4D R32VEC_3D;
@@ -25,13 +25,13 @@ DEF_VECTYPE(I32VEC_4D, I32, 4)
 DEF_VECTYPE(I32VEC_2D, I32, 2)
 typedef I32VEC_4D I32VEC_3D;
 
-// These specific ones are useful for colour manipulation
+/* These specific ones are useful for colour manipulation */
 DEF_VECTYPE(U8x8, U8, 8)
 DEF_VECTYPE(U8x4, U8, 4)
 DEF_VECTYPE(U16x8, U16, 8)
 DEF_VECTYPE(U16x4, U16, 4)
 
-// Sensible aliases
+/* Sensible aliases */
 typedef R64VEC_4D R64x4;
 typedef R32VEC_4D R32x4;
 typedef I32VEC_4D I32x4;
@@ -46,9 +46,9 @@ typedef R64VEC_2D R64x2;
 typedef R32VEC_2D R32x2;
 typedef I32VEC_2D I32x2;
 typedef U32VEC_2D U32x2;
-// TODO: Do this the other way round (e.g R64VEC_4D points to R64x4)
+/* TODO: Do this the other way round (e.g R64VEC_4D points to R64x4) */
 
-// Vector macros
+/* Vector macros */
 #define hcl_vector_convert __builtin_convertvector
 /* See https://github.com/simd-everywhere/simde
  * This is a much better library for doing vector stuff anywhere, but the good

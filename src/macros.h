@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-// Useful macros
+/* Useful macros */
 #define MIN(a,b) __extension__ \
 ({ __typeof__ (a) _a = (a); \
 	__typeof__ (b) _b = (b); \
@@ -15,7 +15,7 @@
 
 #define forever for (;;)
 
-// Fast unsigned power functions
+/* Fast unsigned power functions */
 #define UXPowGen(type, name) \
 inline __attribute__((always_inline)) type name(type x, type y) \
 	{ y = MAX((type)1, y); while ((y--) - 1) x *= x; return x; }
