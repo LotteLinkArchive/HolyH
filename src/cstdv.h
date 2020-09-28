@@ -1,5 +1,5 @@
 #ifndef HOLYSTDV_HEADER_FILE
-#define HOLYSDTV_HEADER_FILE
+#define HOLYSTDV_HEADER_FILE
 #if defined(__STDC__)
 # define C89
 # if defined(__STDC_VERSION__)
