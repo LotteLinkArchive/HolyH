@@ -48,6 +48,20 @@ typedef I32VEC_2D I32x2;
 typedef U32VEC_2D U32x2;
 /* TODO: Do this the other way round (e.g R64VEC_4D points to R64x4) */
 
+/* Potentially useful for alpha blending */
+DEF_VECTYPE(U8x32 , U8 , 32);
+DEF_VECTYPE(U16x32, U16, 32);
+DEF_VECTYPE(U8x16 , U8 , 16);
+DEF_VECTYPE(U16x16, U16, 16);
+DEF_VECTYPE(U8x64 , U8 , 64);
+DEF_VECTYPE(U16x64, U16, 64);
+DEF_VECTYPE(R32x4 , R32, 4 );
+DEF_VECTYPE(R64x4 , R64, 4 );
+DEF_VECTYPE(R32x8 , R32, 8 );
+DEF_VECTYPE(R64x8 , R64, 8 );
+DEF_VECTYPE(R32x16, R32, 16);
+DEF_VECTYPE(R64x16, R64, 16);
+
 /* Vector macros */
 #define hcl_vector_convert __builtin_convertvector
 /* See https://github.com/simd-everywhere/simde
