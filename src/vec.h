@@ -1,8 +1,6 @@
 #ifndef HOLYVEC_HEADER_FILE
 #define HOLYVEC_HEADER_FILE
 #ifndef HOLY_NO_VECTORS
-#include <xmmintrin.h>
-#include <pmmintrin.h>
 #include "types.h"
 
 /* Vector definition macro */
