@@ -3,7 +3,8 @@
 
 #include "types.h"
 
-inline __attribute__((always_inline)) U32 u32rup2(U32 v) {
+inline __attribute__((always_inline)) U32 u32rup2(U32 v)
+{
 	v--;
 	v |= v >> 1;
 	v |= v >> 2;
