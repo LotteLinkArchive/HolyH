@@ -57,10 +57,10 @@ typedef	char CHR;
 typedef	float R32;
 typedef	double R64;
 
-/* Natural types (Spoiler: they're all 32-bit) */
-typedef	I32 INAT;
-typedef	U32 UNAT;
-typedef	R32 RNAT;
+/* Natural types */
+typedef	int INAT;
+typedef	unsigned int UNAT;
+typedef	float RNAT;
 
 /* Size type
  * The length depends on the system. SSX is the signed variant (ssize_t)
@@ -79,5 +79,7 @@ typedef	off_t OX;
 /* Boolean types */
 typedef	bool U1;
 #define BOOLIFY(a) ((a)?(true):(false)) /* May not be needed with _Bool */
+
+#define UNS unsigned
 
 #endif
