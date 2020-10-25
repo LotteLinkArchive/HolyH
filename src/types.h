@@ -71,6 +71,10 @@ typedef	size_t SX;
 #ifdef HOLY_ENABLE_SSX
 typedef	ssize_t SSX;
 #endif
+#ifndef HOLY_DISABLE_OX
+#include <stdio.h>
+typedef	off_t OX;
+#endif
 
 /* Boolean types */
 typedef	bool U1;
