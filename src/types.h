@@ -18,18 +18,30 @@
 #endif
 
 /* Integer maximums */
-#define U8_MAX  UINT8_MAX
-#define I8_MIN  INT8_MIN
-#define I8_MAX  INT8_MAX
+#define U8_MAX UINT8_MAX
+#define U8_MIN UINT8_MIN
+#define U8_WIDTH UINT8_WIDTH
+#define I8_MIN INT8_MIN
+#define I8_MAX INT8_MAX
+#define I8_WIDTH INT8_WIDTH
 #define U16_MAX UINT16_MAX
+#define U16_MIN UINT16_MIN
+#define U16_WIDTH UINT16_WIDTH
 #define I16_MIN INT16_MIN
 #define I16_MAX INT16_MAX
+#define I16_WIDTH INT16_WIDTH
 #define U32_MAX UINT32_MAX
+#define U32_MIN UINT32_MIN
+#define U32_WIDTH UINT32_WIDTH
 #define I32_MIN INT32_MIN
 #define I32_MAX INT32_MAX
+#define I32_WIDTH INT32_WIDTH
 #define U64_MAX UINT64_MAX
+#define U64_MIN UINT64_MIN
+#define U64_WIDTH UINT64_WIDTH
 #define I64_MIN INT64_MIN
 #define I64_MAX INT64_MAX
+#define I64_WIDTH INT64_WIDTH
 
 /* Void type */
 typedef	void X0;
@@ -68,12 +80,29 @@ typedef	float RNAT;
  * You might not want to enable SSX because it won't work on things like MSYS2
  */
 typedef	size_t SX;
+#define SX_MAX SIZE_MAX
+#define SX_MIN SIZE_MIN
+#define SX_WIDTH SIZE_WIDTH
 #ifdef HOLY_ENABLE_SSX
 typedef	ssize_t SSX;
 #endif
 #ifndef HOLY_DISABLE_OX
 #include <stdio.h>
 typedef	off_t OX;
+#endif
+#ifndef HOLY_DISABLE_PTR
+typedef ptrdiff_t DPTR;
+typedef intptr_t  IPTR;
+typedef uintptr_t UPTR;
+#define DPTR_MAX PTRDIFF_MAX
+#define DPTR_MIN PTRDIFF_MIN
+#define DPTR_WIDTH PTRDIFF_WIDTH
+#define IPTR_MAX INTPTR_MAX
+#define IPTR_MIN INTPTR_MIN
+#define IPTR_WIDTH INTPTR_WIDTH
+#define UPTR_MAX UINTPTR_MAX
+#define UPTR_MIN UINTPTR_MIN
+#define UPTR_WIDTH UINTPTR_WIDTH
 #endif
 
 /* Boolean types */
