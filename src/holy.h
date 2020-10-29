@@ -7,8 +7,6 @@
 #ifndef HOLY_HEADER_FILE
 #define HOLY_HEADER_FILE
 
-#ifndef HOLYSTDV_HEADER_FILE
-#define HOLYSTDV_HEADER_FILE
 #if defined(__STDC__)
 # define C89
 # if defined(__STDC_VERSION__)
@@ -24,7 +22,6 @@
 #  endif
 # endif
 #define CHOLYH
-#endif
 #endif
 
 #include <stdlib.h>
@@ -194,8 +191,6 @@ DEF_VECTYPE(U32x64,  U32, 64 )
 DEF_VECTYPE(U64x8  , U64, 8  )
 DEF_VECTYPE(U32x16 , U32, 16 )
 DEF_VECTYPE(U32x8  , U32, 8  )
-DEF_VECTYPE(R32x4  , R32, 4  )
-DEF_VECTYPE(R64x4  , R64, 4  )
 DEF_VECTYPE(R32x8  , R32, 8  )
 DEF_VECTYPE(R64x8  , R64, 8  )
 DEF_VECTYPE(R32x16 , R32, 16 )
