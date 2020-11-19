@@ -38,6 +38,9 @@
 #endif
 #endif
 
+#define FORCED_UNROLL __extension__ __attribute__((optimize("unroll-loops")))
+#define FORCED_STATIC_INLINE __extension__ static inline __attribute__((always_inline))
+
 /* Integer maximums */
 #define U8_MAX UINT8_MAX
 #define U8_MIN UINT8_MIN
@@ -128,7 +131,7 @@ typedef uintptr_t UPTR;
 
 /* Boolean types */
 typedef	bool U1;
-#define BOOLIFY(a) ((a)?(true):(false)) /* May not be needed with _Bool */
+#define BOOLIFY(a) (U1)((a)?(true):(false)) /* May not be needed with _Bool */
 
 #define UNS unsigned
 
@@ -258,5 +261,7 @@ inline __attribute__((always_inline)) U32 u32rup2(U32 v)
 }
 
 #define UINTP2CHK(n) ((((n) & ((n) - 1)) == 0) && (n) != 0)
+
+#define SWAP(x, y) do { __typeof__(x) _SWAPVTMP = x; x = y; y = _SWAPVTMP; } while (0)
 
 #endif
