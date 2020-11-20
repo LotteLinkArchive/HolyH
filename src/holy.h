@@ -228,7 +228,7 @@ DEF_VECTYPE(R64x16 , R64, 16 )
 
 /* Fast unsigned power functions */
 #define UXPowGen(type, name) \
-inline __attribute__((always_inline)) type name(type x, type y) \
+FORCED_STATIC_INLINE type name(type x, type y) \
 	{ y = MAX((type)1, y); while ((y--) - 1) x *= x; return x; }
 UXPowGen(U16, U16Pow)
 UXPowGen(U32, U32Pow)
@@ -247,7 +247,7 @@ UXPowGen(U64, U64Pow)
 #define HLYRGEXTRCT(source, bits, position) \
 	(source >> position & (U16Pow(2, bits) - 1))
 
-inline __attribute__((always_inline)) U32 u32rup2(U32 v)
+FORCED_STATIC_INLINE U32 u32rup2(U32 v)
 {
 	v--;
 	v |= v >> 1;
